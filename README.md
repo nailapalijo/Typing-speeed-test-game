@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a309174f-50fa-4030-bce7-15abb997514c" alt="image"/>
+  <img src="<img width="1898" height="898" alt="image" src="https://github.com/user-attachments/assets/1f04ed0b-0deb-4108-acb2-19004909f14f" />
+" alt="image"/>
 </p>
 
 # Typing Speed Test Game
