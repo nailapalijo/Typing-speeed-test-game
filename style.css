@@ -1,0 +1,170 @@
+/* Import Modern Font - Poppins & JetBrains Mono for a techy feel */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Gradient Background for a premium look */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+}
+
+::selection {
+    color: #fff;
+    background: #6c5ce7;
+}
+
+.wrapper {
+    width: 800px;
+    padding: 40px;
+    /* Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .input-field {
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+.wrapper .content-box {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-box .typing-text {
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.typing-text p {
+    font-size: 22px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all;
+    color: #b2bec3;
+    /* Muted color for un-typed text */
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.typing-text p span.correct {
+    color: #00ff88;
+    /* Neon green */
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+.typing-text p span.incorrect {
+    color: #ff7675;
+    /* Neon red/pink */
+    background: rgba(255, 118, 117, 0.2);
+    border-radius: 4px;
+}
+
+.typing-text p span.active {
+    color: #a29bfe;
+    border-bottom: 2px solid #a29bfe;
+}
+
+
+/* Cursor Animation */
+
+.typing-text p span.active::before {
+    display: none;
+    /* Removed old cursor for cleaner look */
+}
+
+.content-box .content {
+    margin-top: 25px;
+    display: flex;
+    padding: 15px 0 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content .result-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100% - 160px);
+    justify-content: space-around;
+}
+
+.result-details li {
+    display: flex;
+    flex-direction: column;
+    /* Stacked labels for a modern dashboard look */
+    align-items: center;
+    list-style: none;
+}
+
+.result-details li p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #dfe6e9;
+    margin-bottom: 5px;
+}
+
+.result-details li span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00d2ff;
+    /* Bright Cyan */
+}
+
+.content button {
+    outline: none;
+    border: none;
+    width: 130px;
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+    transition: all 0.3s ease;
+}
+
+.content button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(108, 92, 231, 0.4);
+}
+
+.content button:active {
+    transform: scale(0.95);
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 745px) {
+    .wrapper {
+        padding: 25px;
+    }
+    .content .result-details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content button {
+        width: 100%;
+    }
+}
