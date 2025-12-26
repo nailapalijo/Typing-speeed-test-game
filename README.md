@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="C:\Users\Dell 5500\Downloads\Typing-Speed-App-master\Typing-Speed-App-master\image.png" alt="Typing Speed Test Game Banner" width="100%"/>
+  <img src="image.png" width="100%"/>
 </p>
 
 # ⌨️ Typing Speed Test Game
